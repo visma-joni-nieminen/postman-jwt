@@ -30,7 +30,6 @@ signature = base64url(signature)
 var signedToken = `${token}.${signature}`
 
 pm.environment.set("jwt_signed", signedToken)
-console.log("Signed and encoded JWT", signedToken)
 var jwttoken = signedToken
 
 function base64url(source) {
