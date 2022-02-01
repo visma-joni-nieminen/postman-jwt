@@ -31,6 +31,7 @@ var signedToken = `${token}.${signature}`
 
 pm.environment.set("jwt_signed", signedToken)
 console.log("Signed and encoded JWT", signedToken)
+var token = signedToken
 
 function base64url(source) {
     encodedSource = CryptoJS.enc.Base64.stringify(source)
